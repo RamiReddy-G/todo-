@@ -5,8 +5,9 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import dotenv from 'dotenv';
-import authRoutes from './routes/auth.js';
-import todoRoutes from './routes/todo.js';
+import authRoutes from './auth.js';
+import todoRoutes from './todo.js';
+
 
 
 dotenv.config();
@@ -59,4 +60,5 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 })
 .catch(err => {
 console.error('DB connection error', err);
+
 });
